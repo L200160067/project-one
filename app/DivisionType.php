@@ -2,16 +2,16 @@
 
 namespace App\Enums;
 
-enum CompetitionLevel: string
+enum DivisionType: string
 {
-    case Prestasi = 'prestasi'; // Sistem Gugur
-    case Festival = 'festival'; // Pemula
+    case Weight = 'weight';         // Kelas Berat (Kyorugi)
+    case Performance = 'performance'; // Seni (Poomsae)
 
     public function label(): string
     {
         return match ($this) {
-            self::Prestasi => 'Prestasi',
-            self::Festival => 'Festival',
+            self::Weight => 'Tanding (Berat)',
+            self::Performance => 'Seni (Tunggal/Regu)',
         };
     }
 }
